@@ -5,7 +5,7 @@
 # SHELL=E:/GEMINI2/MUPFEL.TTP
 # UUDECODE=uudecode
 
-VARDAT = data rumors quest.dat oracles options
+VARDAT = data rumors quest.dat oracles options x11tiles Nethack.ad pet_mark.xbm rip.xpm
 
 all:	$(VARDAT) spec_levs quest_levs dungeon
 

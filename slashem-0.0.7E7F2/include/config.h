@@ -51,7 +51,7 @@
  * Some combinations make no sense.  See the installation document.
  */
 #define TTY_GRAPHICS		/* good old tty based graphics */
-/* #define X11_GRAPHICS */	/* X11 interface */
+#define X11_GRAPHICS		/* X11 interface */
 /* #define QT_GRAPHICS */	/* Qt Interface */
 /* #define KDE */		/* KDE Interface */
 /* #define GTK_GRAPHICS */	/* GTK Interface */
@@ -170,7 +170,7 @@
 #endif
 
 #ifndef DEFAULT_WINDOW_SYS
-# define DEFAULT_WINDOW_SYS "tty"
+define DEFAULT_WINDOW_SYS "tty"
 #endif
 
 #ifdef X11_GRAPHICS
@@ -183,7 +183,7 @@
  *  xpmtoppm <x11tiles.xpm | pnmscale 1.25 | pnmdepth 255 |
  *     ppmquant 90 | ppmtoxpm >x11tiles_big.xpm
  */
-/* # define USE_XPM */		/* Disable if you do not have the XPM library */
+# define USE_XPM		/* Disable if you do not have the XPM library */
 # ifdef USE_XPM
 #  define GRAPHIC_TOMBSTONE	/* Use graphical tombstone (rip.xpm) */
 # endif
@@ -227,12 +227,12 @@
 
 #ifdef UNIX
 /* path and file name extension for compression program */
-# define COMPRESS "/usr/bin/compress" /* Lempel-Ziv compression */
-# define COMPRESS_EXTENSION ".Z"	     /* compress's extension */
+/* # define COMPRESS "/usr/bin/compress" /* Lempel-Ziv compression */
+/* # define COMPRESS_EXTENSION ".Z"	     /* compress's extension */
 
 /* An example of one alternative you might want to use: */
-/* # define COMPRESS "/usr/local/bin/gzip" */   /* FSF gzip compression */
-/* # define COMPRESS_EXTENSION ".gz" */	     /* normal gzip extension */
+# define COMPRESS "/bin/gzip"		   /* FSF gzip compression */
+# define COMPRESS_EXTENSION ".gz"	     /* normal gzip extension */
 
 /* # define COMPRESS "/usr/bin/bzip2"	*//* bzip2 compression */
 /* # define COMPRESS_EXTENSION ".bz2"	*//* bzip2 extension */

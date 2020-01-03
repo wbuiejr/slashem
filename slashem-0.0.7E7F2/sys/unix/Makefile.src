@@ -291,8 +291,8 @@ WINGLOBJ = gl_conf.o gl_emul.o gl_font.o gl_hardw.o \
 SDLGL_CFLAGS = `sdl-config --cflags`
 
 # Use these declarations if you only want to support the TTY windowing system
-WINSRC = $(WINTTYSRC)
-WINOBJ = $(WINTTYOBJ)
+WINSRC = $(WINTTYSRC) $(WINX11SRC)
+WINOBJ = $(WINTTYOBJ) $(WINX11OBJ)
 # Use these declarations if you want to support the X11 windowing system
 # WINSRC = $(WINTTYSRC) $(WINX11SRC)
 # WINOBJ = $(WINTTYOBJ) $(WINX11OBJ)
@@ -334,14 +334,14 @@ WINOBJ = $(WINTTYOBJ)
 #
 # libraries for tty ports
 # WINTTYLIB = -ltermcap
-# WINTTYLIB = -lcurses
+WINTTYLIB = -lcurses
 # WINTTYLIB = -lcurses16
 # WINTTYLIB = -lncurses
-WINTTYLIB = -ltermlib
+# WINTTYLIB = -ltermlib
 #
 # libraries for X11
 # If USE_XPM is defined in config.h, you will also need -lXpm here.
-WINX11LIB = -lXaw -lXmu -lXext -lXt -lX11
+WINX11LIB = -lXaw -lXmu -lXext -lXt -lXpm -lX11 -lm -L/usr/X11R6/lib
 # WINX11LIB = -lXaw -lXmu -lXt -lX11
 # WINX11LIB = -lXaw -lXmu -lXext -lXt -lXpm -lX11 -lm
 # WINX11LIB = -lXaw -lXmu -lXpm -lXext -lXt -lX11 -lSM -lICE -lm # BSD/OS 2.0
@@ -372,7 +372,7 @@ WINGLLIB = -lGL
 WINPROXYLIB = -lpthread
 
 # Use this declaration if you only want to support the TTY windowing system
-WINLIB = $(WINTTYLIB)
+WINLIB = $(WINTTYLIB) $(WINX11LIB)
 # Use this declaration if you want to support the X11 windowing system
 # WINLIB = $(WINTTYLIB) $(WINX11LIB)
 # Use this declaration if you want to support the Qt windowing system
