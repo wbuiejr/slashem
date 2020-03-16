@@ -51,10 +51,10 @@
  * Some combinations make no sense.  See the installation document.
  */
 #define TTY_GRAPHICS		/* good old tty based graphics */
-#define X11_GRAPHICS		/* X11 interface */
+/* #define X11_GRAPHICS */		/* X11 interface */
 /* #define QT_GRAPHICS */	/* Qt Interface */
 /* #define KDE */		/* KDE Interface */
-/* #define GTK_GRAPHICS */	/* GTK Interface */
+#define GTK_GRAPHICS	/* GTK Interface */
 /* #define GNOME_GRAPHICS */	/* Gnome interface */
 /* #define PROXY_GRAPHICS */	/* Plug-in interfaces */
 /* #define MSWIN_GRAPHICS */	/* Windows NT, CE, Graphics */
@@ -246,7 +246,7 @@ define DEFAULT_WINDOW_SYS "tty"
  *	a tar-like file, thus making a neater installation.  See *conf.h
  *	for detailed configuration.
  */
-/* #define DLB */             /* not supported on all platforms */
+#define DLB             /* not supported on all platforms */
 
 /*
  *	Defining INSURANCE slows down level changes, but allows games that
