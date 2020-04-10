@@ -16,10 +16,11 @@ The Slash'EM executable running in the container will be running in a GTK interf
 
 Build your container:
 
-You will probably want to change the password in the buildme.sh script.
-This is not the place to give a security tutorial,
+(This is not the place to give a security tutorial,
 e.g. about not using passwords on command lines.
-If you are not working in a secure environment, you are on your own to secure it.
+If you are not working in a secure environment, you are on your own to secure it.)
+
+You will probably want to change the password in the buildme.sh script.
 
 Then run it:
 
