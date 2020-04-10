@@ -117,3 +117,5 @@ $ "
 alias h='fc -l'
 
 set -o vi
+
+export SLASHEMOPTIONS=~/.slashemrc-gtk
