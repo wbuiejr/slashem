@@ -9,17 +9,14 @@ This image contains slashem-0.0.7E7F2 source code that has been modified to buil
 ### Prerequisites
 
 Obviously, you will first need to install Docker on your host.
-We also assume you will be running the container on a host that already supports X11.
+I also assume you will be running the container on a host that already supports X11.
 The Slash'EM executable running in the container will be running in a GTK interface, forwarding X11 to your host.
 
 ### Installing
 
 Build your container:
 
-You will probably want to change the password in the buildme.sh script.
-This is not the place to give a security tutorial,
-e.g. about not using passwords on command lines.
-If you are not working in a secure environment, you are on your own to secure it.
+You may want to change the password in the buildme.sh script.
 
 Then run it:
 
@@ -34,9 +31,15 @@ runme.sh
 
 Slash'EM will be executable from the command line as "slashem".
 
-## Issues
+## Issues and Caveats
 
-The GUI seems to be working fine, but I notice a lot of nonfatal errors being thrown
+- I work on my own EC2 instance in my own VPC, so I'm not really concerned about security.
+If you are not working in a secure environment, you are on your own to secure it.
+
+- My tiles aren't transparent. I don't know why.
+
+- The GUI seems to be working fine aside from the transparency issue,
+but I notice a lot of nonfatal errors being thrown
 in the terminal window that launched slashem.
 I'm not sure what's up with that.
 I'd welcome pull requests to resolve them.
