@@ -16,7 +16,7 @@ The Slash'EM executable running in the container will be running in a GTK interf
 
 Build your container:
 
-You may want to change the password in the buildme.sh script.
+*(Note: You may want to change the password in the buildme.sh script.)*
 
 Then run it:
 
@@ -36,13 +36,13 @@ Slash'EM will be executable from the command line as "slashem".
 - I work on my own EC2 instance in my own VPC, so I'm not really concerned about security.
 If you are not working in a secure environment, you are on your own to secure it.
 
-- My tiles aren't transparent. I don't know why.
+- My tiles aren't transparent. I don't know why. I'd welcome pull requests to resolve that.
 
 - The GUI seems to be working fine aside from the transparency issue,
 but I notice a lot of nonfatal errors being thrown
 in the terminal window that launched slashem.
 I'm not sure what's up with that.
-I'd welcome pull requests to resolve them.
+I'd welcome pull requests to resolve that, too.
 
 ## Author
 
