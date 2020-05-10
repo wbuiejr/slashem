@@ -55,5 +55,3 @@ I'd welcome pull requests to resolve them.
 Released with NO WARRANTY under the same NETHACK GENERAL PUBLIC LICENSE as Slash'EM source code.
 
 See the Slash'EM source code base included in the mage for more details.
-
-
